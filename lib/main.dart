@@ -2,6 +2,7 @@ import 'package:ecommerce/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:ecommerce/splash.dart';
 //app
 //git done
 //dd
@@ -27,23 +28,23 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: AnimatedSplashScreen(
-        splash: Container(
-
-          child: new Image.asset('image/RICHLY.jpg'),color:Colors.green,
-
-          alignment: Alignment.centerLeft,
-           constraints: BoxConstraints.tightForFinite(width: 200),
-           // child:
-           //
-
-
-        ),
-          duration: 3000,
-
-
+      home:Splash()
+      // AnimatedSplashScreen(
+      //    splash:Splash(),
+      //   // Container(
+      //   //
+      //   //   child: new Image.asset('image/RICHLY.jpg'),color:Colors.green,
+      //   //
+      //   //   alignment: Alignment.centerLeft,
+      //   //    constraints: BoxConstraints.tightForFinite(width: 200),
+      //   //
+      //   // ),
+      //     duration: 3000,
       //
-      nextScreen: MyHomePage(title: 'GFG'))
+      //
+      // //
+      // nextScreen: MyHomePage(title: 'GFG')
+      //)
     );
   }
 }
