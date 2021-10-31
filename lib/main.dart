@@ -1,7 +1,7 @@
-import 'package:ecommerce/home.dart';
+//import 'package:ecommerce/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_splash_screen/animated_splash_screen.dart';
+//import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:ecommerce/splash.dart';
 //app
 //git done
