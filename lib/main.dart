@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home: AnimatedSplashScreen(
-        splash: Icons.home,
+        splash: 'image/sample.jpg',
           duration: 3000,
 
       //
