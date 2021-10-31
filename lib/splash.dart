@@ -24,20 +24,27 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-
-        child:
+      body:
             Container(
-              child: new Image.asset('image/RICHLY.jpg'),
+              //child: new Image.asset('image/sample.jpg'),
+            decoration: BoxDecoration(image:
+            DecorationImage(
+
+                  image: AssetImage("image/RICHLY.jpg"),
+                  fit: BoxFit.cover
+                  ),
+            ),
+
 
              alignment: Alignment.center,
+              constraints: BoxConstraints.tightForFinite(width: 600),
               // height:200, width: 100,
              // color: Colors.blue,
 
             ),
 
 
-        ),
+
 
     );
 
