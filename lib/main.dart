@@ -1,4 +1,5 @@
 import 'package:ecommerce/home.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 //app
@@ -27,8 +28,19 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home: AnimatedSplashScreen(
-        splash: 'image/sample.jpg',
+        splash: Container(
+
+          child: new Image.asset('image/RICHLY.jpg'),color:Colors.green,
+
+          alignment: Alignment.centerLeft,
+           constraints: BoxConstraints.tightForFinite(width: 200),
+           // child:
+           //
+
+
+        ),
           duration: 3000,
+
 
       //
       nextScreen: MyHomePage(title: 'GFG'))
