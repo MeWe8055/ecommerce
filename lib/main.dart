@@ -1,5 +1,6 @@
+import 'package:ecommerce/home.dart';
 import 'package:flutter/material.dart';
-import  'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 //app
 //git done
 void main() {
@@ -24,7 +25,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: AnimatedSplashScreen(splash: splash, nextScreen: next),
+      home: AnimatedSplashScreen(
+        splash: Icons.home,
+          duration: 3000,
+
+      //
+      nextScreen: MyHomePage(title: 'GFG'))
     );
   }
 }
