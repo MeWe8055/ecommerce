@@ -1,3 +1,4 @@
+import 'package:ecommerce/login/login.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
 
@@ -15,8 +16,8 @@ class _SplashState extends State<Splash> {
   }
 
   _navigatetohome() async {
-    await Future.delayed(Duration(milliseconds: 5000), () {});
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyHomePage (title: 'GFG',)));
+    await Future.delayed(Duration(milliseconds: 2000), () {});
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => login()));
   }
 
   @override
@@ -32,7 +33,7 @@ class _SplashState extends State<Splash> {
             ),
 
              alignment: Alignment.center,
-              constraints: BoxConstraints.tightForFinite(width: 600),
+             // constraints: BoxConstraints.tightForFinite(width: 600),
             ),
     );
 
