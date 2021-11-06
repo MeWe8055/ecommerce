@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import'package:flutter/material.dart';
+import 'package:form_field_validator/form_field_validator.dart';
+import 'package:ecommerce/splash.dart';
 
 
 class login extends StatefulWidget {
@@ -10,6 +12,38 @@ class login extends StatefulWidget {
 }
 
 class _loginState extends State<login> {
+
+  GlobalKey<FormState> formkey = GlobalKey<FormState>();
+
+void validate(){
+  if(formkey.currentState.validate()){
+    print("Validated");
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Splash()),
+    );
+  }else{
+    print("not Validated");
+  }
+}
+
+
+ String validatepass(value){
+
+
+   {
+     if(value.isEmpty){
+       return "Required";
+     }else if(value.length <6){
+       return "Should bee atleast 6 characters";
+     }else if(value.length > 15){
+       return "Should not be more than 15 characters";
+     }else {
+       return null;
+     }
+   };
+ }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,15 +53,22 @@ class _loginState extends State<login> {
         ),
         child: Center(
           child: Form(
+            autovalidateMode: AutovalidateMode.always, key: formkey,
               child:Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
 
                       ),
-                      labelText: "Email"
-                    ),
+                      labelText: "Email"),
+                      validator: MultiValidator(
+                       [
+                         RequiredValidator(errorText: "Required *"),
+                         EmailValidator(errorText: "Not A Valid Email"),
+                       ]
+                      )
 
                   ),
                   Padding(
@@ -35,17 +76,29 @@ class _loginState extends State<login> {
                         top: 20.0,
                       ),
                     child: TextFormField(
-
-                    ),
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                          labelText: "Password"),
+                      validator: validatepass,
+                  ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(
                       top: 20.0,
                     ),
                     child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: validate,
                         child: Text("Login")
                     )
+                  ),
+                  Padding(
+                      padding: EdgeInsets.only(
+                        top: 20.0,
+                      ),
+                      child: RaisedButton(
+                          onPressed: validate,
+                          child: Text("Register")
+                      )
                   )
                 ],
               ) ),
