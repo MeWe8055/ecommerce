@@ -13,41 +13,50 @@ class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(
-          25.0
-        ),
+      body: Scaffold(
+        body:
+        SafeArea(
         child: Center(
-          child: Form(
-              child:Column(
-                children: <Widget>[
-                  TextFormField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
+        child:Column(mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Login",style: TextStyle(
+              fontSize: 20
+          ),
+          ),
+          Text("Welcome Back !",style: TextStyle(
+              fontSize: 50
+          ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              top: 20.0,
+            ),
+            child: TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.mail),
+                hintText: 'Email',
+                labelText: 'Name *',
+              ),
+              onSaved: (String value) {
 
-                      ),
-                      labelText: "Email"
-                    ),
 
-                  ),
-                  Padding(
-                      padding: EdgeInsets.only(
-                        top: 20.0,
-                      ),
-                    child: TextFormField(
+              },
+              validator: (String value) {
+                return (value != null && value.contains('@')) ? 'Do not use the @ char.' : null;
+              },
+            ),
+          ),
+          Padding(
+              padding: EdgeInsets.only(
+                top: 20.0,
+              ),
+              child: RaisedButton(
+                  onPressed: () {},
+                  child: Text("Login")
+              )
+          )
+        ],
 
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 20.0,
-                    ),
-                    child: RaisedButton(
-                        onPressed: () {},
-                        child: Text("Login")
-                    )
-                  )
-                ],
               ) ),
         ),
       )
