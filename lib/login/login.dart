@@ -13,20 +13,42 @@ class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: TextFormField(
-          decoration: const InputDecoration(
-            icon: Icon(Icons.mail),
-            hintText: 'Email',
-            labelText: 'Name *',
-          ),
-          onSaved: (String value) {
+      body: Padding(
+        padding: EdgeInsets.all(
+          25.0
+        ),
+        child: Center(
+          child: Form(
+              child:Column(
+                children: <Widget>[
+                  TextFormField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
 
+                      ),
+                      labelText: "Email"
+                    ),
 
-          },
-          validator: (String value) {
-            return (value != null && value.contains('@')) ? 'Do not use the @ char.' : null;
-          },
+                  ),
+                  Padding(
+                      padding: EdgeInsets.only(
+                        top: 20.0,
+                      ),
+                    child: TextFormField(
+
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: 20.0,
+                    ),
+                    child: RaisedButton(
+                        onPressed: () {},
+                        child: Text("Login")
+                    )
+                  )
+                ],
+              ) ),
         ),
       )
     );
