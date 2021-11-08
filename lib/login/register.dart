@@ -51,24 +51,27 @@ class _RegisterState extends State<Register> {
                 child:Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text("Register"),
-                    TextFormField(
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(
+                    Text("Register",style: TextStyle(fontSize: 50),),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: TextFormField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
 
-                            ),
-                            labelText: "Email"),
-                        validator: MultiValidator(
-                            [
-                              RequiredValidator(errorText: "Required *"),
-                              EmailValidator(errorText: "Not A Valid Email"),
-                            ]
-                        )
+                              ),
+                              labelText: "Email"),
+                          validator: MultiValidator(
+                              [
+                                RequiredValidator(errorText: "Required *"),
+                                EmailValidator(errorText: "Not A Valid Email"),
+                              ]
+                          )
 
+                      ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(
-                        top: 20.0,
+                      padding: EdgeInsets.all(
+                        20.0,
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
@@ -78,8 +81,8 @@ class _RegisterState extends State<Register> {
                       )
                     ),
                     Padding(
-                        padding: EdgeInsets.only(
-                          top: 20.0,
+                        padding: EdgeInsets.all(
+                           20.0,
                         ),
                         child: TextFormField(
                           decoration: InputDecoration(

@@ -79,33 +79,35 @@ void validate(){
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(
-          25.0
-        ),
-        child: Center(
+      body:
+         Center(
           child: Form(
             autovalidateMode: AutovalidateMode.always, key: formkey,
               child:Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  TextFormField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
+                  Text("Login",style: TextStyle(fontSize: 50),),
 
-                      ),
-                      labelText: "Email"),
-                      validator: MultiValidator(
-                       [
-                         RequiredValidator(errorText: "Required *"),
-                         EmailValidator(errorText: "Not A Valid Email"),
-                       ]
-                      )
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
 
+                        ),
+                        labelText: "Email"),
+                        validator: MultiValidator(
+                         [
+                           RequiredValidator(errorText: "Required *"),
+                           EmailValidator(errorText: "Not A Valid Email"),
+                         ]
+                        )
+
+                    ),
                   ),
                   Padding(
-                      padding: EdgeInsets.only(
-                        top: 20.0,
+                      padding: EdgeInsets.all(
+                         20.0,
                       ),
                     child: TextFormField(
                       decoration: InputDecoration(
@@ -142,7 +144,7 @@ void validate(){
                 ],
               ) ),
         ),
-      )
+
     );
   }
 }
