@@ -45,16 +45,13 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(
-              25.0
-          ),
-          child: Center(
+        body: Center(
             child: Form(
                 autovalidateMode: AutovalidateMode.always, key: formkey,
                 child:Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
+                    Text("Register"),
                     TextFormField(
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
@@ -104,7 +101,7 @@ class _RegisterState extends State<Register> {
                   ],
                 ) ),
           ),
-        )
-    );
+        );
+
   }
 }

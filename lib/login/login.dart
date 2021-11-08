@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:ecommerce/splash.dart';
-
+import 'package:ecommerce/login/register.dart';
 
 class login extends StatefulWidget {
   const login({Key key}) : super(key: key);
@@ -43,6 +43,37 @@ void validate(){
      }
    };
  }
+  void validateregi(){
+    if(formkey.currentState.validate()){
+      print("Validated");
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Splash()),
+      );
+    }else{
+      print("not Validated");
+    }
+  }
+
+
+  String validateregipass(value){
+
+
+    {
+      if(value.isEmpty){
+        return "Required";
+      }else if(value.length <6){
+        return "Should bee atleast 6 characters";
+      }else if(value.length > 15){
+        return "Should not be more than 15 characters";
+      }else {
+        return null;
+      }
+    };
+  }
+  void sample(){
+    MaterialPageRoute(builder: (context) => Register());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +127,8 @@ void validate(){
                         top: 20.0,
                       ),
                       child: RaisedButton(
-                          onPressed: validate,
+                          onPressed: sample,
+                          //{MaterialPageRoute(builder: (context) => Register());},
                           child: Text("Register")
                       )
                   )
