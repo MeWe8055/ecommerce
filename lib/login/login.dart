@@ -70,7 +70,7 @@ void validate(){
       }else {
         return null;
       }
-    };
+    }
   }
   void sample(){
     MaterialPageRoute(builder: (context) => Register());
