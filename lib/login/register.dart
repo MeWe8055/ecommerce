@@ -39,7 +39,7 @@ class _RegisterState extends State<Register> {
       }else {
         return null;
       }
-    };
+    }
   }
 
   @override

@@ -41,7 +41,7 @@ void validate(){
      }else {
        return null;
      }
-   };
+   }
  }
   void validateregi(){
     if(formkey.currentState.validate()){
@@ -65,7 +65,8 @@ void validate(){
       }else if(value.length <6){
         return "Should bee atleast 6 characters";
       }else if(value.length > 15){
-        return "Should not be more than 15 characters";
+        return "Should not be more than 15 characte'"
+            "rs";
       }else {
         return null;
       }
@@ -117,7 +118,7 @@ void validate(){
                     padding: EdgeInsets.only(
                       top: 20.0,
                     ),
-                    child: RaisedButton(
+                    child:  ElevatedButton(
                         onPressed: validate,
                         child: Text("Login")
                     )
@@ -126,9 +127,15 @@ void validate(){
                       padding: EdgeInsets.only(
                         top: 20.0,
                       ),
-                      child: RaisedButton(
-                          onPressed: sample,
-                          //{MaterialPageRoute(builder: (context) => Register());},
+                      child:  ElevatedButton(
+                          onPressed: ()
+                          {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Register()),
+                            );
+                         //  Navigat MaterialPgeRoute(builder: (context) => Register());
+          },
                           child: Text("Register")
                       )
                   )
