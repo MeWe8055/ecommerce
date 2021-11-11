@@ -65,7 +65,7 @@ void validate(){
       }else if(value.length <6){
         return "Should bee atleast 6 characters";
       }else if(value.length > 15){
-        return "Should not be more than 15 characte'"
+        return "Should not be more than 15 character'"
             "rs";
       }else {
         return null;
@@ -125,6 +125,13 @@ void validate(){
                         child: Text("Login")
                     )
                   ),
+                  Divider(
+                    color: Colors.black,
+                    thickness: 1,
+                    height: 50,
+                  ),
+                  Text("If you are New register"),
+
                   Padding(
                       padding: EdgeInsets.only(
                         top: 20.0,
@@ -136,8 +143,8 @@ void validate(){
                               context,
                               MaterialPageRoute(builder: (context) => Register()),
                             );
-                         //  Navigat MaterialPgeRoute(builder: (context) => Register());
-          },
+                            },
+
                           child: Text("Register")
                       )
                   )

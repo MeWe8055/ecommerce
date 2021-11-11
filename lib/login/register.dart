@@ -1,3 +1,4 @@
+import 'package:ecommerce/login/login.dart';
 import'package:flutter/material.dart';
 import 'package:ecommerce/splash.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -95,11 +96,31 @@ class _RegisterState extends State<Register> {
                         padding: EdgeInsets.only(
                           top: 20.0,
                         ),
-                        child: RaisedButton(
+                        child: ElevatedButton(
                             onPressed: validate,
                             child: Text("Register")
                         )
                     ),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 1,
+                      height: 50,
+                    ),
+                    Text("If your already registered"),
+                    Padding(
+                        padding: EdgeInsets.only(
+                          top: 20.0,
+
+                        ),
+                        child: ElevatedButton(
+                            onPressed:(){ Navigator.push(context, MaterialPageRoute(builder:(context)=>login()),
+                            );
+                            },
+                            child: Text("Login")
+                        ),
+                    ),
+
+
 
                   ],
                 ) ),
