@@ -58,7 +58,7 @@ class _RegisterState extends State<Register> {
                       child: TextFormField(
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
-
+                                borderRadius: BorderRadius.circular(30),
                               ),
                               labelText: "Email"),
                           validator: MultiValidator(
@@ -76,7 +76,9 @@ class _RegisterState extends State<Register> {
                       ),
                       child: TextFormField(
                         decoration: InputDecoration(
-                            border: OutlineInputBorder(),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
                             labelText: "Password"),
                         validator: validatepass,
                       )
@@ -87,7 +89,9 @@ class _RegisterState extends State<Register> {
                         ),
                         child: TextFormField(
                           decoration: InputDecoration(
-                              border: OutlineInputBorder(),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
                               labelText: "Re-enter Password"),
                           validator: validatepass,
                         )

@@ -93,6 +93,7 @@ void validate(){
                     child: TextFormField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
 
                         ),
                         labelText: "Email"),
@@ -111,7 +112,9 @@ void validate(){
                       ),
                     child: TextFormField(
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
                           labelText: "Password"),
                       validator: validatepass,
                   ),
