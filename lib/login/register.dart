@@ -46,89 +46,93 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-            child: Form(
-                autovalidateMode: AutovalidateMode.always, key: formkey,
-                child:Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text("Register",style: TextStyle(fontSize: 50),),
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: TextFormField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                              ),
-                              labelText: "Email"),
-                          validator: MultiValidator(
-                              [
-                                RequiredValidator(errorText: "Required *"),
-                                EmailValidator(errorText: "Not A Valid Email"),
-                              ]
+        body: SingleChildScrollView(
+           child: SafeArea(
+             child: Center(
+                child: Form(
+                    autovalidateMode: AutovalidateMode.always, key: formkey,
+                    child:Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text("Register",style: TextStyle(fontSize: 50),),
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: TextFormField(
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  labelText: "Email"),
+                              validator: MultiValidator(
+                                  [
+                                    RequiredValidator(errorText: "Required *"),
+                                    EmailValidator(errorText: "Not A Valid Email"),
+                                  ]
+                              )
+
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(
+                            20.0,
+                          ),
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                labelText: "Password"),
+                            validator: validatepass,
                           )
-
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(
-                        20.0,
-                      ),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
+                        ),
+                        Padding(
+                            padding: EdgeInsets.all(
+                               20.0,
                             ),
-                            labelText: "Password"),
-                        validator: validatepass,
-                      )
-                    ),
-                    Padding(
-                        padding: EdgeInsets.all(
-                           20.0,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  labelText: "Re-enter Password"),
+                              validator: validatepass,
+                            )
                         ),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                              ),
-                              labelText: "Re-enter Password"),
-                          validator: validatepass,
-                        )
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(
-                          top: 20.0,
+                        Padding(
+                            padding: EdgeInsets.only(
+                              top: 20.0,
+                            ),
+                            child: ElevatedButton(
+                                onPressed: validate,
+                                child: Text("Register")
+                            )
                         ),
-                        child: ElevatedButton(
-                            onPressed: validate,
-                            child: Text("Register")
-                        )
-                    ),
-                    Divider(
-                      color: Colors.black,
-                      thickness: 1,
-                      height: 50,
-                    ),
-                    Text("If your already registered"),
-                    Padding(
-                        padding: EdgeInsets.only(
-                          top: 20.0,
+                        Divider(
+                          color: Colors.black,
+                          thickness: 1,
+                          height: 50,
+                        ),
+                        Text("If your already registered"),
+                        Padding(
+                            padding: EdgeInsets.only(
+                              top: 20.0,
 
+                            ),
+                            child: ElevatedButton(
+                                onPressed:(){ Navigator.push(context, MaterialPageRoute(builder:(context)=>login()),
+                                );
+                                },
+                                child: Text("Login")
+                            ),
                         ),
-                        child: ElevatedButton(
-                            onPressed:(){ Navigator.push(context, MaterialPageRoute(builder:(context)=>login()),
-                            );
-                            },
-                            child: Text("Login")
-                        ),
-                    ),
 
 
 
-                  ],
-                ) ),
-          ),
+                      ],
+                    ) ),
+              ),
+           ),
+        ),
         );
 
   }
