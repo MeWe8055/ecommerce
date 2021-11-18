@@ -1,3 +1,4 @@
+import 'package:ecommerce/home.dart';
 import 'package:flutter/cupertino.dart';
 import'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -20,7 +21,7 @@ void validate(){
     print("Validated");
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => Splash()),
+      MaterialPageRoute(builder: (context) => Home()),
     );
   }else{
     print("not Validated");
@@ -86,14 +87,14 @@ void validate(){
               child:Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text("Login",style: TextStyle(fontSize: 50),),
+                  Text("Login",style: TextStyle(fontSize: 50,fontFamily: 'Raleway'),),
 
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: TextFormField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(10),
 
                         ),
                         labelText: "Email"),
@@ -113,7 +114,7 @@ void validate(){
                     child: TextFormField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                           labelText: "Password"),
                       validator: validatepass,
