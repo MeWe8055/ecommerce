@@ -13,6 +13,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor:Colors.white38,
           elevation: 0.0,
           title:
@@ -20,7 +21,7 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
               decoration: InputDecoration(
-                  contentPadding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+                  contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.0),
                     borderSide: BorderSide(
@@ -53,9 +54,9 @@ class _HomeState extends State<Home> {
       ),
       body:
       Padding(
-        padding: const EdgeInsets.all(11.0),
+        padding: const EdgeInsets.all(2.0),
         child: Container(
-          height: 180.0,
+          height: 150.0,
 
           child: Carousel(
             boxFit: BoxFit.cover,
@@ -64,7 +65,7 @@ class _HomeState extends State<Home> {
             animationCurve: Curves.fastOutSlowIn,
             animationDuration: Duration(milliseconds: 1000),
             dotSize: 6.0,
-            dotIncreasedColor: Color(0xFFFF335C),
+            dotIncreasedColor: Colors.white,
             dotBgColor: Colors.transparent,
             dotPosition: DotPosition.bottomCenter,
             dotVerticalPadding: 5.0,
