@@ -131,16 +131,16 @@ class _HomeState extends State<Home> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.add_shopping_cart),
+            label: 'cart',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.admin_panel_settings),
+            label: 'Profile',
           ),
         ],
         // currentIndex: _selectedIndex,
-        // selectedItemColor: Colors.amber[800],
+         selectedItemColor: Colors.amber[800],
         // onTap:(){},
       ),
     );
