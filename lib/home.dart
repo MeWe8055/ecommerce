@@ -53,33 +53,75 @@ class _HomeState extends State<Home> {
 
       ),
       body:
-      Padding(
-        padding: const EdgeInsets.all(2.0),
-        child: Container(
-          height: 150.0,
+      Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 150.0,
 
-          child: Carousel(
-            boxFit: BoxFit.cover,
-            
-            autoplay: true,
-            animationCurve: Curves.fastOutSlowIn,
-            animationDuration: Duration(milliseconds: 1000),
-            dotSize: 6.0,
-            dotIncreasedColor: Colors.white,
-            dotBgColor: Colors.transparent,
-            dotPosition: DotPosition.bottomCenter,
-            dotVerticalPadding: 5.0,
-            showIndicator: true,
-            indicatorBgPadding: 7.0,
-            borderRadius: true,
-            radius: Radius.circular(20.0),
-            images: [
-              AssetImage("image/RICHLY.jpg"),
-              AssetImage("image/RICHLY.jpg"),
-            ],
+              child: Carousel(
+                boxFit: BoxFit.cover,
+
+                autoplay: true,
+                animationCurve: Curves.fastOutSlowIn,
+                animationDuration: Duration(milliseconds: 1000),
+                dotSize: 6.0,
+                dotIncreasedColor: Colors.white,
+                dotBgColor: Colors.transparent,
+                dotPosition: DotPosition.bottomCenter,
+                dotVerticalPadding: 5.0,
+                showIndicator: true,
+                indicatorBgPadding: 7.0,
+                borderRadius: true,
+                radius: Radius.circular(20.0),
+                images: [
+                  AssetImage("image/RICHLY.jpg"),
+                  AssetImage("image/RICHLY.jpg"),
+                  AssetImage("image/RICHLY.jpg"),
+                  AssetImage("image/RICHLY.jpg"),
+                ],
+              ),
+
+            ),
           ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 40,
+                   child: Text("Food",style: TextStyle(fontSize: 20
+                   ),),
+                 // color: Colors.purple,
+                  decoration: BoxDecoration(
 
-        ),
+                      border: Border.all(color: Colors.black),
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  padding: const EdgeInsets.all(5.0
+                ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 40,
+                  child: Text("Chats",style: TextStyle(fontSize: 20
+                  ),),
+                  // color: Colors.purple,
+                  decoration: BoxDecoration(
+
+                    border: Border.all(color: Colors.black),
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  padding: const EdgeInsets.all(5.0
+                  ),
+                ),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }
