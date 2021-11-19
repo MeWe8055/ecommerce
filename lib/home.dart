@@ -13,6 +13,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor:Colors.white,
+        elevation: 0.0,
         title:
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -22,11 +23,20 @@ class _HomeState extends State<Home> {
 
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
-
-
+                  borderSide: BorderSide(
+                    color: Colors.black,
+                  ),
 
                 ),
-                labelText: "Search"),
+              prefixIcon: Padding(
+                  padding: EdgeInsets.all(0.0),
+                child: Icon(
+                  Icons.search,
+                color: Colors.grey,
+                ),
+                 ),
+                hintText: 'Search Food, chats',
+                hintStyle: TextStyle(fontSize: 15.0)),
 
           ),
         )
