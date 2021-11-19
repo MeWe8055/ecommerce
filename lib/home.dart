@@ -13,49 +13,50 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:Colors.white,
-        elevation: 0.0,
-        title:
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: TextFormField(
-            decoration: InputDecoration(
-                contentPadding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25.0),
-                  borderSide: BorderSide(
-                    color: Colors.black,
-
-                  ),
-
-                ),
-                enabledBorder: OutlineInputBorder(
+          backgroundColor:Colors.white38,
+          elevation: 0.0,
+          title:
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              decoration: InputDecoration(
+                  contentPadding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+                  focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.0),
                     borderSide: BorderSide(
                       color: Colors.black,
 
-                    )
-                ),
-              prefixIcon: Padding(
-                  padding: EdgeInsets.all(0.0),
-                child: Icon(
-                  Icons.search,
-                color: Colors.black,
-                ),
-                 ),
-                hintText: 'Search Food, chats',
-                hintStyle: TextStyle(fontSize: 15.0)),
+                    ),
 
-          ),
-        )
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: BorderSide(
+                        color: Colors.black,
+
+                      )
+                  ),
+                  prefixIcon: Padding(
+                    padding: EdgeInsets.all(0.0),
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.black,
+                    ),
+                  ),
+                  hintText: 'Search Food, chats',
+                  hintStyle: TextStyle(fontSize: 15.0)),
+
+            ),
+          )
 
 
       ),
       body:
       Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(11.0),
         child: Container(
-          height: 150.0,
+          height: 180.0,
+
           child: Carousel(
             boxFit: BoxFit.cover,
             autoplay: true,
@@ -64,12 +65,13 @@ class _HomeState extends State<Home> {
             dotSize: 6.0,
             dotIncreasedColor: Color(0xFFFF335C),
             dotBgColor: Colors.transparent,
-            dotPosition: DotPosition.topRight,
-            dotVerticalPadding: 10.0,
+            dotPosition: DotPosition.bottomCenter,
+            dotVerticalPadding: 5.0,
             showIndicator: true,
             indicatorBgPadding: 7.0,
+            borderRadius: true,
             images: [
-             AssetImage("image/RICHLY.jpg"),
+              AssetImage("image/RICHLY.jpg"),
               AssetImage("image/RICHLY.jpg"),
             ],
           ),
