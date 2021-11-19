@@ -19,7 +19,7 @@ class _loginState extends State<login> {
 void validate(){
   if(formkey.currentState.validate()){
     print("Validated");
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => Home()),
     );
