@@ -59,6 +59,7 @@ class _HomeState extends State<Home> {
 
           child: Carousel(
             boxFit: BoxFit.cover,
+            
             autoplay: true,
             animationCurve: Curves.fastOutSlowIn,
             animationDuration: Duration(milliseconds: 1000),
@@ -70,6 +71,7 @@ class _HomeState extends State<Home> {
             showIndicator: true,
             indicatorBgPadding: 7.0,
             borderRadius: true,
+            radius: Radius.circular(20.0),
             images: [
               AssetImage("image/RICHLY.jpg"),
               AssetImage("image/RICHLY.jpg"),
