@@ -92,7 +92,7 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   height: 40,
-                   child: Text("Food",style: TextStyle(fontSize: 20
+                   child: Text(" Food ",style: TextStyle(fontSize: 20
                    ),),
                  // color: Colors.purple,
                   decoration: BoxDecoration(
@@ -123,6 +123,15 @@ class _HomeState extends State<Home> {
             ],
           )
         ],
+      ),
+      bottomNavigationBar:BottomNavigationBar(items:const<BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+          icon: Icon(Icons.home),),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),),
+        ]
       ),
     );
   }
