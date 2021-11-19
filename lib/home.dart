@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);
@@ -20,19 +21,26 @@ class _HomeState extends State<Home> {
           child: TextFormField(
             decoration: InputDecoration(
                 contentPadding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
-
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.0),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25.0),
                   borderSide: BorderSide(
                     color: Colors.black,
+
                   ),
 
+                ),
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(25.0),
+                    borderSide: BorderSide(
+                      color: Colors.black,
+
+                    )
                 ),
               prefixIcon: Padding(
                   padding: EdgeInsets.all(0.0),
                 child: Icon(
                   Icons.search,
-                color: Colors.grey,
+                color: Colors.black,
                 ),
                  ),
                 hintText: 'Search Food, chats',
@@ -42,6 +50,31 @@ class _HomeState extends State<Home> {
         )
 
 
+      ),
+      body:
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          height: 150.0,
+          child: Carousel(
+            boxFit: BoxFit.cover,
+            autoplay: true,
+            animationCurve: Curves.fastOutSlowIn,
+            animationDuration: Duration(milliseconds: 1000),
+            dotSize: 6.0,
+            dotIncreasedColor: Color(0xFFFF335C),
+            dotBgColor: Colors.transparent,
+            dotPosition: DotPosition.topRight,
+            dotVerticalPadding: 10.0,
+            showIndicator: true,
+            indicatorBgPadding: 7.0,
+            images: [
+             AssetImage("image/RICHLY.jpg"),
+              AssetImage("image/RICHLY.jpg"),
+            ],
+          ),
+
+        ),
       ),
     );
   }
