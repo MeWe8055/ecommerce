@@ -1,5 +1,7 @@
+import 'package:ecommerce/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:ecommerce/splash.dart';
 
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);
@@ -9,6 +11,23 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _selectedIndex = 0;
+  List<Widget> _WidgetOptions = <Widget>[
+    Text('home'),
+    Text('cart'),
+    Text('profile'),
+  ];
+
+
+  void _onItemTap (int index){
+    setState(() {
+      _selectedIndex= index;
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => Splash())
+
+      );
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +85,7 @@ class _HomeState extends State<Home> {
                 autoplay: true,
                 animationCurve: Curves.fastOutSlowIn,
                 animationDuration: Duration(milliseconds: 1000),
-                dotSize: 6.0,
+                dotSize: 3.0,
                 dotIncreasedColor: Colors.white,
                 dotBgColor: Colors.transparent,
                 dotPosition: DotPosition.bottomCenter,
@@ -92,16 +111,16 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   height: 40,
-                   child: Text(" Food ",style: TextStyle(fontSize: 20
-                   ),),
-                 // color: Colors.purple,
+                  child: Text(" Food ",style: TextStyle(fontSize: 20
+                  ),),
+                  // color: Colors.purple,
                   decoration: BoxDecoration(
 
-                      border: Border.all(color: Colors.black),
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   padding: const EdgeInsets.all(5.0
-                ),
+                  ),
                 ),
               ),
               Padding(
@@ -121,9 +140,65 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ],
+
+          ),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Card(
+
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  elevation: 5,
+                  child: const SizedBox(
+                    width: 500,
+                    height: 150,
+                    child: Text('abcd'),
+                  ),
+
+                ),
+              ),
+              Padding( padding: const EdgeInsets.all(8.0),
+                child: Card(
+
+
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  elevation: 5,
+                  child: const SizedBox(
+                    width: 500,
+                    height: 150,
+                    child: Text('abcd'),
+                  ),
+
+                ),
+              ),
+              Padding( padding: const EdgeInsets.all(8.0),
+                child: Card(
+
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  elevation: 5,
+                  child: const SizedBox(
+                    width: 500,
+                    height: 150,
+                    child: Text('abcd'),
+                  ),
+
+                ),
+              )
+            ],
           )
+
+
+
         ],
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -140,8 +215,9 @@ class _HomeState extends State<Home> {
           ),
         ],
         // currentIndex: _selectedIndex,
-         selectedItemColor: Colors.amber[800],
-        // onTap:(){},
+        selectedItemColor: Colors.black,
+        currentIndex: _selectedIndex,
+        onTap:_onItemTap,
       ),
     );
   }
