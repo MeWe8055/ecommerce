@@ -2,6 +2,8 @@ import 'package:ecommerce/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:ecommerce/splash.dart';
+import 'package:flutter/widgets.dart';
+
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);
 
@@ -17,25 +19,22 @@ class _HomeState extends State<Home> {
     Text('profile'),
   ];
 
-
-  void _onItemTap (int index){
+  void _onItemTap(int index) {
     setState(() {
-      _selectedIndex= index;
-      Navigator.push(context,
-          MaterialPageRoute(builder: (context) => Splash())
-
-      );
+      _selectedIndex = index;
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Splash()));
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor:Colors.white38,
+          backgroundColor: Colors.white38,
           elevation: 0.0,
-          title:
-          Padding(
+          title: Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
               decoration: InputDecoration(
@@ -44,17 +43,13 @@ class _HomeState extends State<Home> {
                     borderRadius: BorderRadius.circular(25.0),
                     borderSide: BorderSide(
                       color: Colors.black,
-
                     ),
-
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       borderSide: BorderSide(
                         color: Colors.black,
-
-                      )
-                  ),
+                      )),
                   prefixIcon: Padding(
                     padding: EdgeInsets.all(0.0),
                     child: Icon(
@@ -64,24 +59,17 @@ class _HomeState extends State<Home> {
                   ),
                   hintText: 'Search Food, chats',
                   hintStyle: TextStyle(fontSize: 15.0)),
-
             ),
-          )
-
-
-      ),
-      body:
-      SingleChildScrollView(
+          )),
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: 150.0,
-
                 child: Carousel(
                   boxFit: BoxFit.cover,
-
                   autoplay: true,
                   animationCurve: Curves.fastOutSlowIn,
                   animationDuration: Duration(milliseconds: 1000),
@@ -101,7 +89,6 @@ class _HomeState extends State<Home> {
                     AssetImage("image/RICHLY.jpg"),
                   ],
                 ),
-
               ),
             ),
             Row(
@@ -111,95 +98,243 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     height: 40,
-                    child: Text(" Food ",style: TextStyle(fontSize: 20
-                    ),),
+                    child: Text(
+                      " Food ",
+                      style: TextStyle(fontSize: 20),
+                    ),
                     // color: Colors.purple,
                     decoration: BoxDecoration(
-
                       border: Border.all(color: Colors.black),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
-                    padding: const EdgeInsets.all(5.0
-                    ),
+                    padding: const EdgeInsets.all(5.0),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     height: 40,
-                    child: Text("Chats",style: TextStyle(fontSize: 20
-                    ),),
+                    child: Text(
+                      "Chats",
+                      style: TextStyle(fontSize: 20),
+                    ),
                     // color: Colors.purple,
                     decoration: BoxDecoration(
-
                       border: Border.all(color: Colors.black),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
-                    padding: const EdgeInsets.all(5.0
-                    ),
+                    padding: const EdgeInsets.all(5.0),
                   ),
                 ),
               ],
-
             ),
             Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
-
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)
-                    ),
+                        borderRadius: BorderRadius.circular(20)),
                     elevation: 5,
-                    child: const SizedBox(
+                    child: Container(
                       width: 500,
                       height: 150,
-                      child: Text('abcd'),
-                    ),
+                      child: Text('NOODLES'),
 
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              alignment: Alignment.centerLeft,
+                              image: AssetImage("image/noodles.jpg"))),
+                    ),
                   ),
                 ),
-                Padding( padding: const EdgeInsets.all(8.0),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Card(
-
-
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)
-                    ),
+                        borderRadius: BorderRadius.circular(20)),
                     elevation: 5,
-                    child: const SizedBox(
+                    child: Container(
                       width: 500,
                       height: 150,
-                      child: Text('abcd'),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              alignment: Alignment.centerLeft,
+                              image: AssetImage("image/noodles.jpg"))),
                     ),
-
                   ),
                 ),
-                Padding( padding: const EdgeInsets.all(8.0),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Card(
-
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)
-                    ),
+                        borderRadius: BorderRadius.circular(20)),
                     elevation: 5,
-                    child: const SizedBox(
+                    child: Container(
                       width: 500,
                       height: 150,
-                      child: Text('abcd'),
-                    ),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              alignment: Alignment.centerLeft,
+                              image: AssetImage("image/noodles.jpg"))),
 
+
+                    ),
                   ),
-                )
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    elevation: 5,
+                    child: Container(
+                      width: 500,
+                      height: 150,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              alignment: Alignment.centerLeft,
+                              image: AssetImage("image/noodles.jpg"))),
+
+
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    elevation: 5,
+                    child: Container(
+                      width: 500,
+                      height: 150,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              alignment: Alignment.centerLeft,
+                              image: AssetImage("image/noodles.jpg"))),
+
+
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    elevation: 5,
+                    child: Container(
+                      width: 500,
+                      height: 150,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              alignment: Alignment.centerLeft,
+                              image: AssetImage("image/noodles.jpg"))),
+
+
+
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    elevation: 5,
+                    child: Container(
+                      width: 500,
+                      height: 150,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              alignment: Alignment.centerLeft,
+                              image: AssetImage("image/noodles.jpg"))),
+
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    elevation: 5,
+                    child: Container(
+                      width: 500,
+                      height: 150,
+
+
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              alignment: Alignment.centerLeft,
+                              image: AssetImage("image/noodles.jpg"))),
+
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    elevation: 5,
+                    child: Container(
+                      width: 500,
+                      height: 150,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              alignment: Alignment.centerLeft,
+                              image: AssetImage("image/noodles.jpg"))),
+
+
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    elevation: 5,
+                    child: Container(
+                      width: 500,
+                      height: 150,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              alignment: Alignment.centerLeft,
+                              image: AssetImage("image/noodles.jpg"))),
+
+
+                    ),
+                  ),
+                ),
+
               ],
             )
-
-
-
           ],
         ),
       ),
-
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -218,7 +353,7 @@ class _HomeState extends State<Home> {
         // currentIndex: _selectedIndex,
         selectedItemColor: Colors.black,
         currentIndex: _selectedIndex,
-        onTap:_onItemTap,
+        onTap: _onItemTap,
       ),
     );
   }
