@@ -2,7 +2,6 @@ import 'package:ecommerce/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:ecommerce/splash.dart';
-//DD
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);
 
@@ -72,131 +71,133 @@ class _HomeState extends State<Home> {
 
       ),
       body:
-      Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 150.0,
+      SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 150.0,
 
-              child: Carousel(
-                boxFit: BoxFit.cover,
+                child: Carousel(
+                  boxFit: BoxFit.cover,
 
-                autoplay: true,
-                animationCurve: Curves.fastOutSlowIn,
-                animationDuration: Duration(milliseconds: 1000),
-                dotSize: 3.0,
-                dotIncreasedColor: Colors.white,
-                dotBgColor: Colors.transparent,
-                dotPosition: DotPosition.bottomCenter,
-                dotVerticalPadding: 5.0,
-                showIndicator: true,
-                indicatorBgPadding: 7.0,
-                borderRadius: true,
-                radius: Radius.circular(20.0),
-                images: [
-                  AssetImage("image/RICHLY.jpg"),
-                  AssetImage("image/RICHLY.jpg"),
-                  AssetImage("image/RICHLY.jpg"),
-                  AssetImage("image/RICHLY.jpg"),
-                ],
+                  autoplay: true,
+                  animationCurve: Curves.fastOutSlowIn,
+                  animationDuration: Duration(milliseconds: 1000),
+                  dotSize: 3.0,
+                  dotIncreasedColor: Colors.white,
+                  dotBgColor: Colors.transparent,
+                  dotPosition: DotPosition.bottomCenter,
+                  dotVerticalPadding: 5.0,
+                  showIndicator: true,
+                  indicatorBgPadding: 7.0,
+                  borderRadius: true,
+                  radius: Radius.circular(20.0),
+                  images: [
+                    AssetImage("image/RICHLY.jpg"),
+                    AssetImage("image/RICHLY.jpg"),
+                    AssetImage("image/RICHLY.jpg"),
+                    AssetImage("image/RICHLY.jpg"),
+                  ],
+                ),
+
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 40,
+                    child: Text(" Food ",style: TextStyle(fontSize: 20
+                    ),),
+                    // color: Colors.purple,
+                    decoration: BoxDecoration(
+
+                      border: Border.all(color: Colors.black),
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    padding: const EdgeInsets.all(5.0
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 40,
+                    child: Text("Chats",style: TextStyle(fontSize: 20
+                    ),),
+                    // color: Colors.purple,
+                    decoration: BoxDecoration(
+
+                      border: Border.all(color: Colors.black),
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    padding: const EdgeInsets.all(5.0
+                    ),
+                  ),
+                ),
+              ],
 
             ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 40,
-                  child: Text(" Food ",style: TextStyle(fontSize: 20
-                  ),),
-                  // color: Colors.purple,
-                  decoration: BoxDecoration(
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
 
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  padding: const EdgeInsets.all(5.0
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 40,
-                  child: Text("Chats",style: TextStyle(fontSize: 20
-                  ),),
-                  // color: Colors.purple,
-                  decoration: BoxDecoration(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    elevation: 5,
+                    child: const SizedBox(
+                      width: 500,
+                      height: 150,
+                      child: Text('abcd'),
+                    ),
 
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  padding: const EdgeInsets.all(5.0
                   ),
                 ),
-              ),
-            ],
+                Padding( padding: const EdgeInsets.all(8.0),
+                  child: Card(
 
-          ),
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
 
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    elevation: 5,
+                    child: const SizedBox(
+                      width: 500,
+                      height: 150,
+                      child: Text('abcd'),
+                    ),
+
                   ),
-                  elevation: 5,
-                  child: const SizedBox(
-                    width: 500,
-                    height: 150,
-                    child: Text('abcd'),
-                  ),
-
                 ),
-              ),
-              Padding( padding: const EdgeInsets.all(8.0),
-                child: Card(
+                Padding( padding: const EdgeInsets.all(8.0),
+                  child: Card(
 
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    elevation: 5,
+                    child: const SizedBox(
+                      width: 500,
+                      height: 150,
+                      child: Text('abcd'),
+                    ),
 
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)
                   ),
-                  elevation: 5,
-                  child: const SizedBox(
-                    width: 500,
-                    height: 150,
-                    child: Text('abcd'),
-                  ),
-
-                ),
-              ),
-              Padding( padding: const EdgeInsets.all(8.0),
-                child: Card(
-
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)
-                  ),
-                  elevation: 5,
-                  child: const SizedBox(
-                    width: 500,
-                    height: 150,
-                    child: Text('abcd'),
-                  ),
-
-                ),
-              )
-            ],
-          )
+                )
+              ],
+            )
 
 
 
-        ],
+          ],
+        ),
       ),
 
       bottomNavigationBar: BottomNavigationBar(
