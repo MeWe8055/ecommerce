@@ -2,7 +2,7 @@ import 'package:ecommerce/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/splash.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-
+//DD
 class Register extends StatefulWidget {
   const Register({Key key}) : super(key: key);
 
