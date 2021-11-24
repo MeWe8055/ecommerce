@@ -1,4 +1,5 @@
 import 'package:ecommerce/splash.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:ecommerce/splash.dart';
@@ -40,13 +41,13 @@ class _HomeState extends State<Home> {
               decoration: InputDecoration(
                   contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(25.0),
+                    borderRadius: BorderRadius.circular(15.0),
                     borderSide: BorderSide(
                       color: Colors.black,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25.0),
+                      borderRadius: BorderRadius.circular(15.0),
                       borderSide: BorderSide(
                         color: Colors.black,
                       )),
@@ -83,9 +84,9 @@ class _HomeState extends State<Home> {
                   borderRadius: true,
                   radius: Radius.circular(20.0),
                   images: [
+                    AssetImage("image/noodles.jpg"),
                     AssetImage("image/RICHLY.jpg"),
-                    AssetImage("image/RICHLY.jpg"),
-                    AssetImage("image/RICHLY.jpg"),
+                    AssetImage("image/noodles.jpg"),
                     AssetImage("image/RICHLY.jpg"),
                   ],
                 ),
@@ -133,199 +134,204 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                    clipBehavior: Clip.antiAlias,
                     elevation: 5,
-                    child: Container(
-                      width: 500,
-                      height: 150,
-                      child: Text('NOODLES'),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Stack(
+                            alignment: Alignment.bottomLeft,
+                            children: [
+                              Ink.image(
+                                height: 200,
+                                image: AssetImage(
+                                  'image/noodles.jpg',
+                                ),
+                                fit: BoxFit.fitWidth,
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 16, top: 5, right: 16),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  'Noodles',
+                                  style: TextStyle(color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 25,),
+                                ),
+                                Text('₹ 50',
+                                  style: TextStyle(color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 17,),
 
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              alignment: Alignment.centerLeft,
-                              image: AssetImage("image/noodles.jpg"))),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                    clipBehavior: Clip.antiAlias,
                     elevation: 5,
-                    child: Container(
-                      width: 500,
-                      height: 150,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              alignment: Alignment.centerLeft,
-                              image: AssetImage("image/noodles.jpg"))),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Stack(
+                            alignment: Alignment.bottomLeft,
+                            children: [
+                              Ink.image(
+                                height: 200,
+                                image: AssetImage(
+                                  'image/noodles.jpg',
+                                ),
+                                fit: BoxFit.fitWidth,
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 16, top: 5, right: 16),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  'FriedRice',
+                                  style: TextStyle(color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 25,),
+                                ),
+                                Text('₹ 50',
+                                  style: TextStyle(color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 17,),
+
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                    clipBehavior: Clip.antiAlias,
                     elevation: 5,
-                    child: Container(
-                      width: 500,
-                      height: 150,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              alignment: Alignment.centerLeft,
-                              image: AssetImage("image/noodles.jpg"))),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Stack(
+                            alignment: Alignment.bottomLeft,
+                            children: [
+                              Ink.image(
+                                height: 200,
+                                image: AssetImage(
+                                  'image/noodles.jpg',
+                                ),
+                                fit: BoxFit.fitWidth,
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 16, top: 5, right: 16),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  'Rice and Sambar',
+                                  style: TextStyle(color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 25,),
+                                ),
+                                Text('₹ 50',
+                                  style: TextStyle(color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 17,),
 
-
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                    clipBehavior: Clip.antiAlias,
                     elevation: 5,
-                    child: Container(
-                      width: 500,
-                      height: 150,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              alignment: Alignment.centerLeft,
-                              image: AssetImage("image/noodles.jpg"))),
-
-
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    elevation: 5,
-                    child: Container(
-                      width: 500,
-                      height: 150,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              alignment: Alignment.centerLeft,
-                              image: AssetImage("image/noodles.jpg"))),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Stack(
+                            alignment: Alignment.bottomLeft,
+                            children: [
+                              Ink.image(
+                                height: 200,
+                                image: AssetImage(
+                                  'image/noodles.jpg',
+                                ),
+                                fit: BoxFit.fitWidth,
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: 16, top: 5, right: 16),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  'Chapathi',
+                                  style: TextStyle(color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 25,),
+                                ),
+                                Text('₹ 50',
+                                  style: TextStyle(color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 17,),
 
-
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    elevation: 5,
-                    child: Container(
-                      width: 500,
-                      height: 150,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              alignment: Alignment.centerLeft,
-                              image: AssetImage("image/noodles.jpg"))),
-
-
-
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    elevation: 5,
-                    child: Container(
-                      width: 500,
-                      height: 150,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              alignment: Alignment.centerLeft,
-                              image: AssetImage("image/noodles.jpg"))),
-
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    elevation: 5,
-                    child: Container(
-                      width: 500,
-                      height: 150,
-
-
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              alignment: Alignment.centerLeft,
-                              image: AssetImage("image/noodles.jpg"))),
-
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    elevation: 5,
-                    child: Container(
-                      width: 500,
-                      height: 150,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              alignment: Alignment.centerLeft,
-                              image: AssetImage("image/noodles.jpg"))),
-
-
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    elevation: 5,
-                    child: Container(
-                      width: 500,
-                      height: 150,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              alignment: Alignment.centerLeft,
-                              image: AssetImage("image/noodles.jpg"))),
-
-
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
