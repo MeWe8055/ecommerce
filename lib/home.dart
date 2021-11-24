@@ -85,9 +85,9 @@ class _HomeState extends State<Home> {
                   radius: Radius.circular(20.0),
                   images: [
                     AssetImage("image/noodles.jpg"),
-                    AssetImage("image/RICHLY.jpg"),
+                    AssetImage("image/friedrice.jpg"),
                     AssetImage("image/noodles.jpg"),
-                    AssetImage("image/RICHLY.jpg"),
+                    AssetImage("image/friedrice.jpg"),
                   ],
                 ),
               ),
@@ -131,8 +131,203 @@ class _HomeState extends State<Home> {
             ),
             Column(
               children: [
+                Text(
+                  'Om Shri',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(0.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      child: CircleAvatar(
+                        radius: 45,
+                        backgroundImage: AssetImage('image/noodles.jpg'),
+                        child: Container(
+                          child: Align(
+                            alignment: Alignment(-0.0, 1.60),
+                            child: Text(
+                              'Noodles',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black54,
+
+                                //fontWeight: FontWeight.w400
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      child: CircleAvatar(
+                        radius: 45,
+                        backgroundImage: AssetImage('image/noodles.jpg'),
+                        child: Container(
+                          child: Align(
+                            alignment: Alignment(-0.0, 1.60),
+                            child: Text(
+                              'Noodles',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black54,
+                                //   fontWeight: FontWeight.w500
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      child: CircleAvatar(
+                        radius: 45,
+                        backgroundImage: AssetImage('image/noodles.jpg'),
+                        child: Container(
+                          child: Align(
+                            alignment: Alignment(-0.0, 1.60),
+                            child: Text(
+                              'Noodles',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      child: CircleAvatar(
+                        radius: 45,
+                        backgroundImage: AssetImage('image/noodles.jpg'),
+                        child: Container(
+                          child: Align(
+                            alignment: Alignment(-0.0, 1.60),
+                            child: Text(
+                              'Noodles',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      child: CircleAvatar(
+                        radius: 45,
+                        backgroundImage: AssetImage('image/noodles.jpg'),
+                        child: Container(
+                          child: Align(
+                            alignment: Alignment(-0.0, 1.60),
+                            child: Text(
+                              'Noodles',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      child: CircleAvatar(
+                        radius: 45,
+                        backgroundImage: AssetImage('image/noodles.jpg'),
+                        child: Container(
+                          child: Align(
+                            alignment: Alignment(-0.0, 1.60),
+                            child: Text(
+                              'Noodles',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      child: CircleAvatar(
+                        radius: 45,
+                        backgroundImage: AssetImage('image/noodles.jpg'),
+                        child: Container(
+                          child: Align(
+                            alignment: Alignment(-0.0, 1.60),
+                            child: Text(
+                              'Noodles',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      child: CircleAvatar(
+                        radius: 45,
+                        backgroundImage: AssetImage('image/noodles.jpg'),
+                        child: Container(
+                          child: Align(
+                            alignment: Alignment(-0.0, 1.60),
+                            child: Text(
+                              'Noodles',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Column(
+              children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(top: 60, left: 8, right: 8),
                   child: Card(
                     clipBehavior: Clip.antiAlias,
                     elevation: 5,
@@ -164,15 +359,19 @@ class _HomeState extends State<Home> {
                               children: <Widget>[
                                 Text(
                                   'Noodles',
-                                  style: TextStyle(color: Colors.black,
+                                  style: TextStyle(
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 25,),
+                                    fontSize: 25,
+                                  ),
                                 ),
-                                Text('₹ 50',
-                                  style: TextStyle(color: Colors.black,
+                                Text(
+                                  '₹ 50',
+                                  style: TextStyle(
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 17,),
-
+                                    fontSize: 17,
+                                  ),
                                 ),
                               ],
                             ),
@@ -215,15 +414,19 @@ class _HomeState extends State<Home> {
                               children: <Widget>[
                                 Text(
                                   'FriedRice',
-                                  style: TextStyle(color: Colors.black,
+                                  style: TextStyle(
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 25,),
+                                    fontSize: 25,
+                                  ),
                                 ),
-                                Text('₹ 50',
-                                  style: TextStyle(color: Colors.black,
+                                Text(
+                                  '₹ 50',
+                                  style: TextStyle(
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 17,),
-
+                                    fontSize: 17,
+                                  ),
                                 ),
                               ],
                             ),
@@ -266,15 +469,19 @@ class _HomeState extends State<Home> {
                               children: <Widget>[
                                 Text(
                                   'Rice and Sambar',
-                                  style: TextStyle(color: Colors.black,
+                                  style: TextStyle(
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 25,),
+                                    fontSize: 25,
+                                  ),
                                 ),
-                                Text('₹ 50',
-                                  style: TextStyle(color: Colors.black,
+                                Text(
+                                  '₹ 50',
+                                  style: TextStyle(
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 17,),
-
+                                    fontSize: 17,
+                                  ),
                                 ),
                               ],
                             ),
@@ -317,15 +524,19 @@ class _HomeState extends State<Home> {
                               children: <Widget>[
                                 Text(
                                   'Chapathi',
-                                  style: TextStyle(color: Colors.black,
+                                  style: TextStyle(
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 25,),
+                                    fontSize: 25,
+                                  ),
                                 ),
-                                Text('₹ 50',
-                                  style: TextStyle(color: Colors.black,
+                                Text(
+                                  '₹ 50',
+                                  style: TextStyle(
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 17,),
-
+                                    fontSize: 17,
+                                  ),
                                 ),
                               ],
                             ),
@@ -335,7 +546,6 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-
               ],
             )
           ],
