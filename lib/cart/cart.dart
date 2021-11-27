@@ -36,7 +36,7 @@ class _CartState extends State<Cart> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
-                          top: 30, left: 80, right: 30, bottom: 40),
+                          top:0, left: 10, right: 30, bottom: 40),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

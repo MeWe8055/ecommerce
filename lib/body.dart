@@ -82,7 +82,51 @@ class _bodyState extends State<body> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
-                        top: 30, left: 80, right: 30, bottom: 40),
+                       left: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Noodles",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '₹ 50',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Row(
+                children: [
+                  FittedBox(
+                    child: Container(
+                      child: Image.asset('image/noodles.jpg'),
+                      width: 150,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -126,7 +170,7 @@ class _bodyState extends State<body> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
-                        top: 30, left: 80, right: 30, bottom: 40),
+                        left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -170,7 +214,7 @@ class _bodyState extends State<body> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
-                        top: 30, left: 80, right: 30, bottom: 40),
+                        left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -214,7 +258,7 @@ class _bodyState extends State<body> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
-                        top: 30, left: 80, right: 30, bottom: 40),
+                        left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -258,7 +302,7 @@ class _bodyState extends State<body> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
-                        top: 30, left: 80, right: 30, bottom: 40),
+                        left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -302,51 +346,7 @@ class _bodyState extends State<body> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
-                        top: 30, left: 80, right: 30, bottom: 40),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Noodles",
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '₹ 50',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                children: [
-                  FittedBox(
-                    child: Container(
-                      child: Image.asset('image/noodles.jpg'),
-                      width: 150,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        top: 30, left: 80, right: 30, bottom: 40),
+                        left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
