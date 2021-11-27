@@ -1,3 +1,4 @@
+import 'package:ecommerce/body.dart';
 import 'package:ecommerce/splash.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class _HomeState extends State<Home> {
     setState(() {
       _selectedIndex = index;
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => Splash()));
+          context, MaterialPageRoute(builder: (context) => login()));
     });
   }
 
@@ -129,11 +130,12 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
-            Column(
+            Row(
               children: [
                 Text(
-                  'Om Shri',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  '     Om Shri',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 )
               ],
             ),
@@ -144,20 +146,23 @@ class _HomeState extends State<Home> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(5.0),
-                    child: Container(
-                      child: CircleAvatar(
-                        radius: 45,
-                        backgroundImage: AssetImage('image/noodles.jpg'),
-                        child: Container(
-                          child: Align(
-                            alignment: Alignment(-0.0, 1.60),
-                            child: Text(
-                              'Noodles',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.black54,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 45,
+                          backgroundImage: AssetImage('image/noodles.jpg'),
+                          child: Container(
+                            child: Align(
+                              alignment: Alignment(-0.0, 1.60),
+                              child: Text(
+                                'Noodles',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black54,
 
-                                //fontWeight: FontWeight.w400
+                                  //fontWeight: FontWeight.w400
+                                ),
                               ),
                             ),
                           ),
@@ -167,19 +172,22 @@ class _HomeState extends State<Home> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(5.0),
-                    child: Container(
-                      child: CircleAvatar(
-                        radius: 45,
-                        backgroundImage: AssetImage('image/noodles.jpg'),
-                        child: Container(
-                          child: Align(
-                            alignment: Alignment(-0.0, 1.60),
-                            child: Text(
-                              'Noodles',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.black54,
-                                //   fontWeight: FontWeight.w500
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 45,
+                          backgroundImage: AssetImage('image/noodles.jpg'),
+                          child: Container(
+                            child: Align(
+                              alignment: Alignment(-0.0, 1.60),
+                              child: Text(
+                                'Noodles',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black54,
+                                  //   fontWeight: FontWeight.w500
+                                ),
                               ),
                             ),
                           ),
@@ -189,19 +197,22 @@ class _HomeState extends State<Home> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(5.0),
-                    child: Container(
-                      child: CircleAvatar(
-                        radius: 45,
-                        backgroundImage: AssetImage('image/noodles.jpg'),
-                        child: Container(
-                          child: Align(
-                            alignment: Alignment(-0.0, 1.60),
-                            child: Text(
-                              'Noodles',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w300),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 45,
+                          backgroundImage: AssetImage('image/noodles.jpg'),
+                          child: Container(
+                            child: Align(
+                              alignment: Alignment(-0.0, 1.60),
+                              child: Text(
+                                'Noodles',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w300),
+                              ),
                             ),
                           ),
                         ),
@@ -210,19 +221,22 @@ class _HomeState extends State<Home> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(5.0),
-                    child: Container(
-                      child: CircleAvatar(
-                        radius: 45,
-                        backgroundImage: AssetImage('image/noodles.jpg'),
-                        child: Container(
-                          child: Align(
-                            alignment: Alignment(-0.0, 1.60),
-                            child: Text(
-                              'Noodles',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w300),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 45,
+                          backgroundImage: AssetImage('image/noodles.jpg'),
+                          child: Container(
+                            child: Align(
+                              alignment: Alignment(-0.0, 1.60),
+                              child: Text(
+                                'Noodles',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w300),
+                              ),
                             ),
                           ),
                         ),
@@ -239,19 +253,70 @@ class _HomeState extends State<Home> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(5.0),
-                    child: Container(
-                      child: CircleAvatar(
-                        radius: 45,
-                        backgroundImage: AssetImage('image/noodles.jpg'),
-                        child: Container(
-                          child: Align(
-                            alignment: Alignment(-0.0, 1.60),
-                            child: Text(
-                              'Noodles',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w300),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 45,
+                          backgroundImage: AssetImage('image/noodles.jpg'),
+                          child: Container(
+                            child: Align(
+                              alignment: Alignment(-0.0, 1.60),
+                              child: Text(
+                                'Noodles',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w300),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 45,
+                          backgroundImage: AssetImage('image/noodles.jpg'),
+                          child: Container(
+                            child: Align(
+                              alignment: Alignment(-0.0, 1.60),
+                              child: Text(
+                                'Noodles',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w300),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 45,
+                          backgroundImage: AssetImage('image/noodles.jpg'),
+                          child: Container(
+                            child: Align(
+                              alignment: Alignment(-0.0, 1.60),
+                              child: Text(
+                                'Noodles',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w300),
+                              ),
                             ),
                           ),
                         ),
@@ -264,57 +329,18 @@ class _HomeState extends State<Home> {
                       child: CircleAvatar(
                         radius: 45,
                         backgroundImage: AssetImage('image/noodles.jpg'),
-                        child: Container(
-                          child: Align(
-                            alignment: Alignment(-0.0, 1.60),
-                            child: Text(
-                              'Noodles',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w300),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: Container(
-                      child: CircleAvatar(
-                        radius: 45,
-                        backgroundImage: AssetImage('image/noodles.jpg'),
-                        child: Container(
-                          child: Align(
-                            alignment: Alignment(-0.0, 1.60),
-                            child: Text(
-                              'Noodles',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w300),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: Container(
-                      child: CircleAvatar(
-                        radius: 45,
-                        backgroundImage: AssetImage('image/noodles.jpg'),
-                        child: Container(
-                          child: Align(
-                            alignment: Alignment(-0.0, 1.60),
-                            child: Text(
-                              'Noodles',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w300),
+                        child: InkWell(
+                          onTap: () {},
+                          child: Container(
+                            child: Align(
+                              alignment: Alignment(-0.0, 1.60),
+                              child: Text(
+                                'Noodles',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w300),
+                              ),
                             ),
                           ),
                         ),
@@ -551,25 +577,27 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add_shopping_cart),
-            label: 'cart',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.admin_panel_settings),
-            label: 'Profile',
-          ),
-        ],
-        // currentIndex: _selectedIndex,
-        selectedItemColor: Colors.black,
-        currentIndex: _selectedIndex,
-        onTap: _onItemTap,
+      bottomNavigationBar: Container(
+        child: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.add_shopping_cart),
+              label: 'cart',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.admin_panel_settings),
+              label: 'Profile',
+            ),
+          ],
+          //currentIndex: _selectedIndex,
+          selectedItemColor: Colors.black,
+          currentIndex: _selectedIndex,
+          onTap: _onItemTap,
+        ),
       ),
     );
   }

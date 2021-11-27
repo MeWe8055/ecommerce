@@ -24,6 +24,7 @@ dependencies:
     sdk: flutter
   animated_splash_screen:
   flutter_screenutil:
+  curved_navigation_bar:
 
 
   google_fonts: ^2.1.0
