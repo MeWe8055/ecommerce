@@ -1,3 +1,4 @@
+import 'package:ecommerce/cart/cart.dart';
 import 'package:ecommerce/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -10,6 +11,21 @@ class body extends StatefulWidget {
 }
 
 class _bodyState extends State<body> {
+  int _selectedIndex = 0;
+
+  void _onItemTap(int index) {
+    setState(() {
+      _selectedIndex = index;
+      if (index == 0) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Home()));
+      }
+      if (index == 1) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Cart()));
+      }
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -375,6 +391,27 @@ class _bodyState extends State<body> {
           ),
         ],
       ),
+    bottomNavigationBar: Container(
+    child: BottomNavigationBar(
+    items: const <BottomNavigationBarItem>[
+    BottomNavigationBarItem(
+    icon: Icon(Icons.home),
+    label: 'Home',
+    ),
+    BottomNavigationBarItem(
+    icon: Icon(Icons.add_shopping_cart),
+    label: 'cart',
+    ),
+    BottomNavigationBarItem(
+    icon: Icon(Icons.admin_panel_settings),
+    label: 'Profile',
+    ),
+    ],
+    currentIndex: _selectedIndex,
+    selectedItemColor: Colors.black,
+    onTap: _onItemTap,
+    ),
+    ),
     );
   }
 }
