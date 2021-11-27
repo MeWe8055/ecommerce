@@ -1,5 +1,6 @@
 import 'package:ecommerce/cart/cart.dart';
 import 'package:ecommerce/home.dart';
+import 'package:ecommerce/login/user/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -23,6 +24,10 @@ class _bodyState extends State<body> {
       if (index == 1) {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => Cart()));
+      }
+      if (index == 2) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => profile()));
       }
     });
   }

@@ -1,6 +1,7 @@
 import 'package:ecommerce/body.dart';
 import 'package:ecommerce/cart/cart.dart';
 import 'package:ecommerce/login/login.dart';
+import 'package:ecommerce/login/user/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
@@ -21,11 +22,15 @@ class _HomeState extends State<Home> {
       _selectedIndex = index;
       if (index == 0) {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => login()));
+            context, MaterialPageRoute(builder: (context) => Home()));
       }
       if (index == 1) {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => Cart()));
+      }
+      if (index == 2) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => profile()));
       }
     });
   }
