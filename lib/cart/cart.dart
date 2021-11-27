@@ -22,36 +22,45 @@ class _CartState extends State<Cart> {
             Padding(
               padding: EdgeInsets.all(10),
               child: Card(
+                clipBehavior: Clip.antiAlias,
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
                 child: Row(
                   children: [
                     FittedBox(
-
                       child: Container(
                         child: Image.asset('image/noodles.jpg'),
-
                         width: 150,
-                        //  padding: const EdgeInsets.all(8.0),
-                        decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.all(const Radius.circular(100.0))),
                       ),
                     ),
-                    Column(
-                      children: [
-                        Text(
-                          "product Name",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                        Text("quantity"),
-                        ToggleButtons(
-                          children: [
-                            Icon(Icons.add),
-                            // SizedBox(child: Text("1")),
-                            Icon(Icons.add),
-                          ],
-                          isSelected: [true, false],
-                        )
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          top: 30, left: 80, right: 30, bottom: 40),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Noodles",
+                            style: TextStyle(
+                              fontSize: 30,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text("Quantity"),
+                         Container(
+                           width: 20.0,
+                           height: 20.0,
+                           decoration: BoxDecoration(
+                             color: Colors.grey[300],
+                             borderRadius: BorderRadius.circular(3),
+
+                           ),
+
+                         )
+                        ],
+                      ),
                     )
                   ],
                 ),
