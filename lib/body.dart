@@ -1,171 +1,379 @@
 import 'package:ecommerce/home.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:form_field_validator/form_field_validator.dart';
-import 'package:ecommerce/splash.dart';
-import 'package:ecommerce/login/register.dart';
-//DD
-class login extends StatefulWidget {
-  const login({Key key}) : super(key: key);
+import 'package:flutter/widgets.dart';
+
+class body extends StatefulWidget {
+  const body({Key key}) : super(key: key);
 
   @override
-  _loginState createState() => _loginState();
+  _bodyState createState() => _bodyState();
 }
 
-class _loginState extends State<login> {
-  GlobalKey<FormState> formkey = GlobalKey<FormState>();
-
-  void validate() {
-    if (formkey.currentState.validate()) {
-      print("Validated");
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => Home()),
-      );
-    } else {
-      print("not Validated");
-    }
-  }
-
-  String validatepass(value) {
-    {
-      if (value.isEmpty) {
-        return "Required *";
-      } else if (value.length < 6) {
-        return "Should bee atleast 6 characters";
-      } else if (value.length > 15) {
-        return "Should not be more than 15 characters";
-      } else {
-        return null;
-      }
-    }
-  }
-
-  void validateregi() {
-    if (formkey.currentState.validate()) {
-      print("Validated");
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => Splash()),
-      );
-    } else {
-      print("not Validated");
-    }
-  }
-
-  String validateregipass(value) {
-    {
-      if (value.isEmpty) {
-        return "Required";
-      } else if (value.length < 6) {
-        return "Should bee atleast 6 characters";
-      } else if (value.length > 15) {
-        return "Should not be more than 15 character'"
-            "rs";
-      } else {
-        return null;
-      }
-    }
-  }
-
-  void sample() {
-    MaterialPageRoute(builder: (context) => Register());
-  }
-
+class _bodyState extends State<body> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Form(
-            autovalidateMode: AutovalidateMode.always,
-            key: formkey,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "Login",
-                  style: TextStyle(fontSize: 50),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: TextFormField(
-                      cursorColor: Colors.black,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        labelText: "Email",
-                      ),
-                      validator: MultiValidator([
-                        RequiredValidator(errorText: "Required *"),
-                        EmailValidator(errorText: "Not A Valid Email"),
-                      ])),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(
-                    20.0,
-                  ),
-                  child: TextFormField(
-                    cursorColor: Colors.black,
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        labelText: "Password"),
-                    validator: validatepass,
+      appBar: AppBar(
+        automaticallyImplyLeading: true,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 25),
+          child: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            color: Colors.black,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Home()),
+              );
+            },
+          ),
+        ),
+        backgroundColor: Colors.white38,
+        elevation: 0.0,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 0, right: 0),
+          child: TextFormField(
+            decoration: InputDecoration(
+                contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                  borderSide: BorderSide(
+                    color: Colors.black,
                   ),
                 ),
-                Padding(
-                    padding: EdgeInsets.only(
-                      top: 20.0,
-                    ),
-                    child: SizedBox(
-                      height: 40, //height of button
-                      width: 200,
-                      child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            textStyle: const TextStyle(fontSize: 20),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15)),
-
-                            primary: Colors.black, // background
-                            onPrimary: Colors.white, // foreground
-                          ),
-                          onPressed: validate,
-                          child: Text("   LOGIN   ")),
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    borderSide: BorderSide(
+                      color: Colors.black,
                     )),
-                Divider(
-                  color: Colors.black,
-                  thickness: 1,
-                  height: 50,
+                prefixIcon: Padding(
+                  padding: EdgeInsets.all(0.0),
+                  child: Icon(
+                    Icons.search,
+                    color: Colors.black,
+                  ),
                 ),
-                Text("If you are new"),
-                Padding(
-                    padding: EdgeInsets.only(
-                      top: 10.0,
+                hintText: 'Search Food, Chats...',
+                hintStyle: TextStyle(fontSize: 15.0)),
+          ),
+        ),
+      ),
+
+
+      body: ListView(
+
+        scrollDirection: Axis.vertical,
+
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Row(
+                children: [
+                  FittedBox(
+                    child: Container(
+                      child: Image.asset('image/noodles.jpg'),
+                      width: 150,
                     ),
-                    child: SizedBox(
-                      height: 40, //height of button
-                      width: 200,
-                      child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            textStyle: const TextStyle(fontSize: 20),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15)),
-                            primary: Colors.black, // background
-                            onPrimary: Colors.white,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 30, left: 80, right: 30, bottom: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Noodles",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
                           ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              //   MaterialPageRoute(builder: (context) => Register())
-                              MaterialPageRoute(builder: (context) => Home()),
-                            );
-                          },
-                          child: Text("REGISTER")),
-                    ))
-              ],
-            )),
+                        ),
+                        Text(
+                          '₹ 50',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Row(
+                children: [
+                  FittedBox(
+                    child: Container(
+                      child: Image.asset('image/noodles.jpg'),
+                      width: 150,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 30, left: 80, right: 30, bottom: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Noodles",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '₹ 50',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Row(
+                children: [
+                  FittedBox(
+                    child: Container(
+                      child: Image.asset('image/noodles.jpg'),
+                      width: 150,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 30, left: 80, right: 30, bottom: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Noodles",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '₹ 50',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Row(
+                children: [
+                  FittedBox(
+                    child: Container(
+                      child: Image.asset('image/noodles.jpg'),
+                      width: 150,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 30, left: 80, right: 30, bottom: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Noodles",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '₹ 50',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Row(
+                children: [
+                  FittedBox(
+                    child: Container(
+                      child: Image.asset('image/noodles.jpg'),
+                      width: 150,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 30, left: 80, right: 30, bottom: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Noodles",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '₹ 50',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Row(
+                children: [
+                  FittedBox(
+                    child: Container(
+                      child: Image.asset('image/noodles.jpg'),
+                      width: 150,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 30, left: 80, right: 30, bottom: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Noodles",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '₹ 50',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Row(
+                children: [
+                  FittedBox(
+                    child: Container(
+                      child: Image.asset('image/noodles.jpg'),
+                      width: 150,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 30, left: 80, right: 30, bottom: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Noodles",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '₹ 50',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

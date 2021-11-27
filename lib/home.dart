@@ -1,6 +1,6 @@
 import 'package:ecommerce/body.dart';
 import 'package:ecommerce/cart/cart.dart';
-import 'package:ecommerce/splash.dart';
+import 'package:ecommerce/login/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
@@ -19,17 +19,15 @@ class _HomeState extends State<Home> {
   void _onItemTap(int index) {
     setState(() {
       _selectedIndex = index;
-      if(index==0){
+      if (index == 0) {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => login()));
       }
-      if(index==1){
+      if (index == 1) {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => Cart()));
       }
-
-
-        });
+    });
   }
 
   @override
@@ -136,7 +134,7 @@ class _HomeState extends State<Home> {
             Row(
               children: [
                 Text(
-                  '     Om Shri',
+                  '       Om Shri',
                   textAlign: TextAlign.left,
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 )
@@ -145,7 +143,7 @@ class _HomeState extends State<Home> {
             Padding(
               padding: const EdgeInsets.all(0.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(5.0),
@@ -204,11 +202,11 @@ class _HomeState extends State<Home> {
                       onTap: () {},
                       child: Container(
                         child: CircleAvatar(
-                          radius:35,
+                          radius: 35,
                           backgroundImage: AssetImage('image/noodles.jpg'),
                           child: Container(
                             child: Align(
-                              alignment: Alignment(-0.0, 1.60),
+                              alignment: Alignment(-0.0, 1.8),
                               child: Text(
                                 'Noodles',
                                 style: TextStyle(
@@ -355,10 +353,33 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 25),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 35, //height of button
+                    width: 200,
+                    child: OutlinedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => body()),
+                        );
+                      },
+                      style: OutlinedButton.styleFrom(
+                        primary: Colors.black,
+                      ),
+                      child: Text("See more"),
+                    ),
+                  )
+                ],
+              ),
+            ),
             Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 60, left: 8, right: 8),
+                  padding: const EdgeInsets.only(top: 10, left: 8, right: 8),
                   child: Card(
                     clipBehavior: Clip.antiAlias,
                     elevation: 5,
