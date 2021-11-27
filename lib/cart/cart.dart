@@ -53,10 +53,11 @@ class _CartState extends State<Cart> {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          Text("Quantity",
+                          Text(
+                            "Quantity",
                             style: TextStyle(
-                              fontSize: 20,),
-
+                              fontSize: 20,
+                            ),
                           ),
                           SizedBox(height: 10.0),
                           Row(
@@ -75,8 +76,8 @@ class _CartState extends State<Cart> {
                                 ),
                               ),
                               Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 12.0),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 12.0),
                                 child: Text(
                                   '1',
                                   style: TextStyle(
@@ -147,9 +148,12 @@ class _CartState extends State<Cart> {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          Text("Quantity",
+                          Text(
+                            "Quantity",
                             style: TextStyle(
-                              fontSize: 20,),),
+                              fontSize: 20,
+                            ),
+                          ),
                           SizedBox(height: 10.0),
                           Row(
                             children: [
@@ -167,8 +171,8 @@ class _CartState extends State<Cart> {
                                 ),
                               ),
                               Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 12.0),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 12.0),
                                 child: Text(
                                   '1',
                                   style: TextStyle(
@@ -239,9 +243,12 @@ class _CartState extends State<Cart> {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          Text("Quantity",
+                          Text(
+                            "Quantity",
                             style: TextStyle(
-                              fontSize: 20,),),
+                              fontSize: 20,
+                            ),
+                          ),
                           SizedBox(height: 10.0),
                           Row(
                             children: [
@@ -259,8 +266,8 @@ class _CartState extends State<Cart> {
                                 ),
                               ),
                               Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 12.0),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 12.0),
                                 child: Text(
                                   '1',
                                   style: TextStyle(
@@ -328,27 +335,28 @@ class _CartState extends State<Cart> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 30,right: 30,top: 45),
+              padding: const EdgeInsets.only(left: 30, right: 30, top: 45),
               child: MaterialButton(
-                  onPressed: () {},
+                onPressed: () {},
                 color: Colors.black,
                 height: 55.0,
                 minWidth: double.infinity,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Text('PROCEED TO CHECKOUT ',style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                ),),
+                child: Text(
+                  'PROCEED TO CHECKOUT ',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
                   ),
+                ),
+              ),
             ),
           ],
         ),
-
       ),
-
     );
   }
 }
