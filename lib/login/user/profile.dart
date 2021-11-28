@@ -1,5 +1,8 @@
+import 'package:ecommerce/cart/cart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../../home.dart';
 
 class profile extends StatefulWidget {
   const profile({Key key}) : super(key: key);
@@ -9,9 +12,34 @@ class profile extends StatefulWidget {
 }
 
 class _profileState extends State<profile> {
+  int _selectedIndex = 0;
+  void _onItemTap(int index) {
+    setState(() {
+      _selectedIndex = index;
+      if (index == 0) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Home()));
+      }
+      if (index == 1) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Cart()));
+      }
+      if (index == 2) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => profile()));
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     appBar: AppBar(
+        elevation: 0,
+        automaticallyImplyLeading: true,
+        backgroundColor: Colors.black,
+        title: Text("Profile"),
+      ),
       body: SafeArea(
         child: Container(
           child: Column(
@@ -77,6 +105,27 @@ class _profileState extends State<profile> {
               ),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        child: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.add_shopping_cart),
+              label: 'cart',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.admin_panel_settings),
+              label: 'Profile',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.black,
+          onTap: _onItemTap,
         ),
       ),
     );
