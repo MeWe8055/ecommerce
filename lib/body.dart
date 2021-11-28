@@ -1,4 +1,5 @@
 import 'package:ecommerce/cart/cart.dart';
+import 'package:ecommerce/detail.dart';
 import 'package:ecommerce/home.dart';
 import 'package:ecommerce/login/user/profile.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,7 @@ class _bodyState extends State<body> {
       }
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,231 +81,133 @@ class _bodyState extends State<body> {
           ),
         ),
       ),
-
-
       body: ListView(
-
         scrollDirection: Axis.vertical,
-
         children: [
           Padding(
             padding: const EdgeInsets.all(10),
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                children: [
-                  FittedBox(
-                    child: Container(
-                      child: Image.asset('image/noodles.jpg'),
-                      width: 150,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                       left: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Noodles",
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '₹ 50',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12.0),
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.black,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 75),
-                              child: MaterialButton(
+            child: Container(
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    //   MaterialPageRoute(builder: (context) => Register())
+                    MaterialPageRoute(
+                        builder: (context) => detail()),
+                  );
+                },
+                child: Card(
 
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(builder: (context) => Cart()),
-                                  );
-                                },
-                                color: Colors.black,
-                                minWidth: 8,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                               child: Text(
-                                 'ADD',
-                                 style: TextStyle(
-                                   color: Colors.white,
-                                   fontSize: 18,
-                                   fontWeight: FontWeight.w500,
-                                 ),
-                               ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                children: [
-                  FittedBox(
-                    child: Container(
-                      child: Image.asset('image/noodles.jpg'),
-                      width: 150,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Noodles",
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '₹ 50',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12.0),
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.black,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 75),
-                              child: MaterialButton(
 
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(builder: (context) => Cart()),
-                                  );
-                                },
+                  clipBehavior: Clip.antiAlias,
+                  elevation: 5,
+
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  child:  Row(
+                    children: [
+                      FittedBox(
+                        child: Container(
+                          child: Image.asset(
+                            'image/noodles.jpg',
+                          ),
+                          width: 150,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Noodles",
+                              style: TextStyle(
+                                fontSize: 30,
                                 color: Colors.black,
-                                minWidth: 8,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Text(
-                                  'ADD',
-                                  style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            Text(
+                              '₹ 50',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  width: 35.0,
+                                  height: 35.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[300],
+                                    borderRadius: BorderRadius.circular(3),
+                                  ),
+                                  child: Icon(
+                                    Icons.add,
                                     color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
+                                    size: 15.0,
                                   ),
                                 ),
-                              ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 12.0),
+                                  child: Text(
+                                    '1',
+                                    style: TextStyle(
+                                        fontSize: 22.0,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Container(
+                                  width: 35.0,
+                                  height: 35.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[300],
+                                    borderRadius: BorderRadius.circular(3),
+                                  ),
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Colors.black,
+                                    size: 15.0,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 75),
+                                  child: MaterialButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        //   MaterialPageRoute(builder: (context) => Register())
+                                        MaterialPageRoute(
+                                            builder: (context) => Cart()),
+                                      );
+                                    },
+                                    color: Colors.black,
+                                    minWidth: 8,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Text(
+                                      'ADD',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-
                           ],
                         ),
-                      ],
-                    ),
-                  )
-                ],
+                      )
+                    ],
+                  ),
+
+                ),
               ),
             ),
           ),
@@ -323,8 +227,7 @@ class _bodyState extends State<body> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10),
+                    padding: const EdgeInsets.only(left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -360,8 +263,8 @@ class _bodyState extends State<body> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12.0),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 12.0),
                               child: Text(
                                 '1',
                                 style: TextStyle(
@@ -385,12 +288,12 @@ class _bodyState extends State<body> {
                             Padding(
                               padding: const EdgeInsets.only(left: 75),
                               child: MaterialButton(
-
                                 onPressed: () {
                                   Navigator.push(
                                     context,
                                     //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(builder: (context) => Cart()),
+                                    MaterialPageRoute(
+                                        builder: (context) => Cart()),
                                   );
                                 },
                                 color: Colors.black,
@@ -433,8 +336,7 @@ class _bodyState extends State<body> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10),
+                    padding: const EdgeInsets.only(left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -470,8 +372,8 @@ class _bodyState extends State<body> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12.0),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 12.0),
                               child: Text(
                                 '1',
                                 style: TextStyle(
@@ -495,12 +397,12 @@ class _bodyState extends State<body> {
                             Padding(
                               padding: const EdgeInsets.only(left: 75),
                               child: MaterialButton(
-
                                 onPressed: () {
                                   Navigator.push(
                                     context,
                                     //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(builder: (context) => Cart()),
+                                    MaterialPageRoute(
+                                        builder: (context) => Cart()),
                                   );
                                 },
                                 color: Colors.black,
@@ -543,8 +445,7 @@ class _bodyState extends State<body> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10),
+                    padding: const EdgeInsets.only(left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -580,8 +481,8 @@ class _bodyState extends State<body> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12.0),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 12.0),
                               child: Text(
                                 '1',
                                 style: TextStyle(
@@ -605,12 +506,12 @@ class _bodyState extends State<body> {
                             Padding(
                               padding: const EdgeInsets.only(left: 75),
                               child: MaterialButton(
-
                                 onPressed: () {
                                   Navigator.push(
                                     context,
                                     //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(builder: (context) => Cart()),
+                                    MaterialPageRoute(
+                                        builder: (context) => Cart()),
                                   );
                                 },
                                 color: Colors.black,
@@ -653,8 +554,7 @@ class _bodyState extends State<body> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10),
+                    padding: const EdgeInsets.only(left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -690,8 +590,8 @@ class _bodyState extends State<body> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12.0),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 12.0),
                               child: Text(
                                 '1',
                                 style: TextStyle(
@@ -715,12 +615,12 @@ class _bodyState extends State<body> {
                             Padding(
                               padding: const EdgeInsets.only(left: 75),
                               child: MaterialButton(
-
                                 onPressed: () {
                                   Navigator.push(
                                     context,
                                     //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(builder: (context) => Cart()),
+                                    MaterialPageRoute(
+                                        builder: (context) => Cart()),
                                   );
                                 },
                                 color: Colors.black,
@@ -763,8 +663,7 @@ class _bodyState extends State<body> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10),
+                    padding: const EdgeInsets.only(left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -800,8 +699,8 @@ class _bodyState extends State<body> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12.0),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 12.0),
                               child: Text(
                                 '1',
                                 style: TextStyle(
@@ -825,12 +724,121 @@ class _bodyState extends State<body> {
                             Padding(
                               padding: const EdgeInsets.only(left: 75),
                               child: MaterialButton(
-
                                 onPressed: () {
                                   Navigator.push(
                                     context,
                                     //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(builder: (context) => Cart()),
+                                    MaterialPageRoute(
+                                        builder: (context) => Cart()),
+                                  );
+                                },
+                                color: Colors.black,
+                                minWidth: 8,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Text(
+                                  'ADD',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Row(
+                children: [
+                  FittedBox(
+                    child: Container(
+                      child: Image.asset('image/noodles.jpg'),
+                      width: 150,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Noodles",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '₹ 50',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              width: 35.0,
+                              height: 35.0,
+                              decoration: BoxDecoration(
+                                color: Colors.grey[300],
+                                borderRadius: BorderRadius.circular(3),
+                              ),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                                size: 15.0,
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 12.0),
+                              child: Text(
+                                '1',
+                                style: TextStyle(
+                                    fontSize: 22.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Container(
+                              width: 35.0,
+                              height: 35.0,
+                              decoration: BoxDecoration(
+                                color: Colors.grey[300],
+                                borderRadius: BorderRadius.circular(3),
+                              ),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.black,
+                                size: 15.0,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 75),
+                              child: MaterialButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    //   MaterialPageRoute(builder: (context) => Register())
+                                    MaterialPageRoute(
+                                        builder: (context) => Cart()),
                                   );
                                 },
                                 color: Colors.black,
@@ -859,27 +867,27 @@ class _bodyState extends State<body> {
           ),
         ],
       ),
-    bottomNavigationBar: Container(
-    child: BottomNavigationBar(
-    items: const <BottomNavigationBarItem>[
-    BottomNavigationBarItem(
-    icon: Icon(Icons.home),
-    label: 'Home',
-    ),
-    BottomNavigationBarItem(
-    icon: Icon(Icons.add_shopping_cart),
-    label: 'cart',
-    ),
-    BottomNavigationBarItem(
-    icon: Icon(Icons.admin_panel_settings),
-    label: 'Profile',
-    ),
-    ],
-    currentIndex: _selectedIndex,
-    selectedItemColor: Colors.black,
-    onTap: _onItemTap,
-    ),
-    ),
+      bottomNavigationBar: Container(
+        child: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.add_shopping_cart),
+              label: 'cart',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.admin_panel_settings),
+              label: 'Profile',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.black,
+          onTap: _onItemTap,
+        ),
+      ),
     );
   }
 }

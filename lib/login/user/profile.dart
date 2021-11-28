@@ -38,6 +38,20 @@ class _profileState extends State<profile> {
         elevation: 0,
         automaticallyImplyLeading: true,
         backgroundColor: Colors.black,
+       leading: Padding(
+         padding: const EdgeInsets.only(left: 20),
+         child: IconButton(
+           icon: Icon(Icons.arrow_back_ios),
+           color: Colors.white,
+           onPressed: () {
+             Navigator.push(
+               context,
+               MaterialPageRoute(builder: (context) => Home()),
+             );
+           },
+         ),
+       ),
+
         title: Text("Profile"),
       ),
       body: SafeArea(
