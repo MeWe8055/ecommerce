@@ -145,7 +145,7 @@ class _bodyState extends State<body> {
                                     borderRadius: BorderRadius.circular(3),
                                   ),
                                   child: Icon(
-                                    Icons.add,
+                                    Icons.remove,
                                     color: Colors.white,
                                     size: 15.0,
                                   ),
@@ -257,7 +257,7 @@ class _bodyState extends State<body> {
                                 borderRadius: BorderRadius.circular(3),
                               ),
                               child: Icon(
-                                Icons.add,
+                                Icons.remove,
                                 color: Colors.white,
                                 size: 15.0,
                               ),
@@ -366,7 +366,7 @@ class _bodyState extends State<body> {
                                 borderRadius: BorderRadius.circular(3),
                               ),
                               child: Icon(
-                                Icons.add,
+                                Icons.remove,
                                 color: Colors.white,
                                 size: 15.0,
                               ),
@@ -475,7 +475,7 @@ class _bodyState extends State<body> {
                                 borderRadius: BorderRadius.circular(3),
                               ),
                               child: Icon(
-                                Icons.add,
+                                Icons.remove,
                                 color: Colors.white,
                                 size: 15.0,
                               ),
