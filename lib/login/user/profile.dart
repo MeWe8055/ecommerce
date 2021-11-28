@@ -13,6 +13,7 @@ class profile extends StatefulWidget {
 
 class _profileState extends State<profile> {
   int _selectedIndex = 0;
+
   void _onItemTap(int index) {
     setState(() {
       _selectedIndex = index;
@@ -34,93 +35,79 @@ class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(
-        elevation: 0,
+      appBar: AppBar(
+        //toolbarHeight: 240,
         automaticallyImplyLeading: true,
         backgroundColor: Colors.black,
-       leading: Padding(
-         padding: const EdgeInsets.only(left: 20),
-         child: IconButton(
-           icon: Icon(Icons.arrow_back_ios),
-           color: Colors.white,
-           onPressed: () {
-             Navigator.push(
-               context,
-               MaterialPageRoute(builder: (context) => Home()),
-             );
-           },
-         ),
-       ),
-
-        title: Text("Profile"),
+//,
+        title: Text(
+          "Profile",
+          style: TextStyle(
+            fontSize: 27,
+          ),
+        ),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(0),
+        )),
+        centerTitle: true,
+        actions: <Widget>[
+          FlatButton(
+            onPressed: () {},
+            child: Text(
+              'Edit',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 17,
+              ),
+            ),
+          ),
+        ],
       ),
-      body: SafeArea(
-        child: Container(
+      body: Center(
+        // heightFactor: 20,
+
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 40),
           child: Column(
-            children: [
-              Card(
-                child: Row(
-                  children: [
-                    FittedBox(
-                      child: Container(
-                        child: Image.asset('image/User.jpg'),
-                        width: 150,
-                      ),
+            //mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                //child: ,
+
+                height: 140,
+                width: 140,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage("image/noodles.jpg"),
+                    )),
+              ),
+              Text(
+                'David',
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.black,
+                ),
+              ),
+              Row(
+                children: [
+                  Card(
+
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                         Text("User Name"),
-                         Text("User email"),
-
-                        ],
-                      ),
-                    )
-
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(2.0),
-                child: Card(
-                  child: SizedBox(
-                    height: 30,
-                    width: 1000,
-                    child: Text("My Orders", style: TextStyle(
-                      fontSize: 18,
-                    ),textAlign: TextAlign.center,),
+                    child: Text("mail"),
                   ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(2.0),
-                child: Card(
-                  child: SizedBox(
-                    height: 30,
-                    width: 1000,
-                    child: Text("Cart", style: TextStyle(
-                      fontSize: 18,
-                    ),textAlign: TextAlign.center,),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(2.0),
-                child: Card(
-                  child: SizedBox(
-                    height: 30,
-                    width: 1000,
-                    child: Text("Log Out", style: TextStyle(
-                      fontSize: 18,
-                    ),textAlign: TextAlign.center,),
-                  ),
-                ),
-              ),
+                ],
+              )
             ],
           ),
         ),
       ),
+
       bottomNavigationBar: Container(
         child: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
