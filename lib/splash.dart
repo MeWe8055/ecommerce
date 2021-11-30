@@ -1,4 +1,5 @@
 import 'package:ecommerce/login/login.dart';
+import 'package:ecommerce/welcome.dart';
 import 'package:flutter/material.dart';
 //DD
 class Splash extends StatefulWidget {
@@ -16,23 +17,25 @@ class _SplashState extends State<Splash> {
 
   _navigatetohome() async {
     await Future.delayed(Duration(milliseconds: 5000), () {});
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => login()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => welcome()));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body:
-            Container(
-            decoration: BoxDecoration(image:
-            DecorationImage(
-                image: AssetImage("image/RICHLY.jpg"),
-                  fit: BoxFit.cover
-                  ),
-            ),
+            Center(
+              child: Container(
+              decoration: BoxDecoration(image:
+              DecorationImage(
+                  image: AssetImage("image/RICHLY.jpg"),
+                    fit: BoxFit.cover
+                    ),
+              ),
 
-             alignment: Alignment.center,
-             // constraints: BoxConstraints.tightForFinite(width: 600),
+               alignment: Alignment.center,
+               // constraints: BoxConstraints.tightForFinite(width: 600),
+              ),
             ),
     );
 
