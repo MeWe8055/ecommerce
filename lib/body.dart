@@ -111,7 +111,7 @@ class _bodyState extends State<body> {
                           child: Image.asset(
                             'image/noodles.jpg',
                           ),
-                          width: 150,
+                          width: 140,
                         ),
                       ),
                       Padding(
@@ -122,7 +122,7 @@ class _bodyState extends State<body> {
                             Text(
                               "Noodles",
                               style: TextStyle(
-                                fontSize: 30,
+                                fontSize: 23,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -130,7 +130,7 @@ class _bodyState extends State<body> {
                             Text(
                               '₹ 50',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -138,8 +138,8 @@ class _bodyState extends State<body> {
                             Row(
                               children: [
                                 Container(
-                                  width: 35.0,
-                                  height: 35.0,
+                                  width: 20.0,
+                                  height: 20.0,
                                   decoration: BoxDecoration(
                                     color: Colors.grey[300],
                                     borderRadius: BorderRadius.circular(3),
@@ -156,13 +156,13 @@ class _bodyState extends State<body> {
                                   child: Text(
                                     '1',
                                     style: TextStyle(
-                                        fontSize: 22.0,
+                                        fontSize: 18.0,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
                                 Container(
-                                  width: 35.0,
-                                  height: 35.0,
+                                  width: 20.0,
+                                  height: 20.0,
                                   decoration: BoxDecoration(
                                     color: Colors.grey[300],
                                     borderRadius: BorderRadius.circular(3),
@@ -174,7 +174,9 @@ class _bodyState extends State<body> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 75),
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 30.0
+                                  ),
                                   child: MaterialButton(
                                     onPressed: () {
                                       Navigator.push(
@@ -185,7 +187,7 @@ class _bodyState extends State<body> {
                                       );
                                     },
                                     color: Colors.black,
-                                    minWidth: 8,
+                                    minWidth: 5,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8),
                                     ),
@@ -193,7 +195,7 @@ class _bodyState extends State<body> {
                                       'ADD',
                                       style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 18,
+                                        fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
@@ -286,7 +288,7 @@ class _bodyState extends State<body> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left: 75),
+                              padding: const EdgeInsets.only(right:2),
                               child: MaterialButton(
                                 onPressed: () {
                                   Navigator.push(
@@ -320,551 +322,7 @@ class _bodyState extends State<body> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                children: [
-                  FittedBox(
-                    child: Container(
-                      child: Image.asset('image/noodles.jpg'),
-                      width: 150,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Noodles",
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '₹ 50',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.remove,
-                                color: Colors.white,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 12.0),
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.black,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 75),
-                              child: MaterialButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(
-                                        builder: (context) => Cart()),
-                                  );
-                                },
-                                color: Colors.black,
-                                minWidth: 8,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Text(
-                                  'ADD',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                children: [
-                  FittedBox(
-                    child: Container(
-                      child: Image.asset('image/noodles.jpg'),
-                      width: 150,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Noodles",
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '₹ 50',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.remove,
-                                color: Colors.white,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 12.0),
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.black,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 75),
-                              child: MaterialButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(
-                                        builder: (context) => Cart()),
-                                  );
-                                },
-                                color: Colors.black,
-                                minWidth: 8,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Text(
-                                  'ADD',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                children: [
-                  FittedBox(
-                    child: Container(
-                      child: Image.asset('image/noodles.jpg'),
-                      width: 150,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Noodles",
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '₹ 50',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 12.0),
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.black,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 75),
-                              child: MaterialButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(
-                                        builder: (context) => Cart()),
-                                  );
-                                },
-                                color: Colors.black,
-                                minWidth: 8,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Text(
-                                  'ADD',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                children: [
-                  FittedBox(
-                    child: Container(
-                      child: Image.asset('image/noodles.jpg'),
-                      width: 150,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Noodles",
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '₹ 50',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 12.0),
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.black,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 75),
-                              child: MaterialButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(
-                                        builder: (context) => Cart()),
-                                  );
-                                },
-                                color: Colors.black,
-                                minWidth: 8,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Text(
-                                  'ADD',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                children: [
-                  FittedBox(
-                    child: Container(
-                      child: Image.asset('image/noodles.jpg'),
-                      width: 150,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Noodles",
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Text(
-                          '₹ 50',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 12.0),
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              width: 35.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.black,
-                                size: 15.0,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 75),
-                              child: MaterialButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    //   MaterialPageRoute(builder: (context) => Register())
-                                    MaterialPageRoute(
-                                        builder: (context) => Cart()),
-                                  );
-                                },
-                                color: Colors.black,
-                                minWidth: 8,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Text(
-                                  'ADD',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
+
         ],
       ),
       bottomNavigationBar: Container(

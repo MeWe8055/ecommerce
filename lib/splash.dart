@@ -2,6 +2,7 @@ import 'package:ecommerce/login/login.dart';
 import 'package:ecommerce/welcome.dart';
 import 'package:flutter/material.dart';
 //DD
+import 'package:firebase_core/firebase_core.dart';
 class Splash extends StatefulWidget {
   const Splash({Key key}) : super(key: key);
 
@@ -16,6 +17,7 @@ class _SplashState extends State<Splash> {
   }
 
   _navigatetohome() async {
+        await Firebase.initializeApp();
     await Future.delayed(Duration(milliseconds: 5000), () {});
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => welcome()));
   }

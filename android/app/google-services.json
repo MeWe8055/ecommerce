@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "749273829166",
+    "project_id": "richly-cbbe7",
+    "storage_bucket": "richly-cbbe7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749273829166:android:f2e9b18103a1c5c03bb4bf",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749273829166-gaibkf7aa7pkpluqhf3r2rphtick8od7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzO1FHosErBUwCno5aKlRjFZ0cVwiuA8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749273829166-gaibkf7aa7pkpluqhf3r2rphtick8od7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
