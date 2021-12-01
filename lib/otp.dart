@@ -1,7 +1,7 @@
 import 'package:ecommerce/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-//DD
+//D
 class otp extends StatefulWidget {
   const otp({Key key}) : super(key: key);
 
